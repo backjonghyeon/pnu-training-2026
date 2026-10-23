@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+  <circle cx="24" cy="24" r="22" fill="#0B2265" stroke="#FFFFFF" stroke-width="2"/>
+  <!-- PNU Torch / Book abstract emblem -->
+  <path d="M14 34C14 26 24 24 24 24C24 24 34 26 34 34H14Z" fill="#FFFFFF" opacity="0.9"/>
+  <path d="M24 10L27 18H21L24 10Z" fill="#C81E1E"/>
+  <circle cx="24" cy="19" r="3" fill="#F59E0B"/>
+  <path d="M16 28C19 26 22 26 24 27C26 26 29 26 32 28" stroke="#0B2265" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 부산대학교 직무연수 포털</title>
+  <meta name="description" content="2026년도 부산대학교 교직원 직무연수 프로그램 종합 안내 포털. 법정의무교육, 직무공통, 예산회계, AI데이터 등 전 과정 실시간 검색 및 신청 안내.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/pnu-logo.svg">
+
+  <!-- Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Global Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-wrap">
+        <img src="assets/pnu-logo.svg" alt="부산대학교 심볼" class="brand-logo">
+        <div class="brand-text-wrap">
+          <span class="brand-univ">부산대학교 직무연수 포털</span>
+          <span class="brand-badge">2026</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <div class="live-sync-indicator" title="구글 스프레드시트의 최신 데이터와 실시간으로 동기화됩니다.">
+          <div class="live-dot"></div>
+          <span id="sync-status-text">실시간 연동 중</span>
+        </div>
+        <button id="btn-refresh" class="btn-refresh" title="구글 시트 데이터 즉시 새로고침">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 4 23 10 17 10"></polyline>
+            <polyline points="1 20 1 14 7 14"></polyline>
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+          </svg>
+          <span>새로고침</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-subtitle-tag">2026 PNU HRD TRAINING PROGRAM</div>
+      <h1 class="hero-title">2026 부산대학교 교직원 직무연수</h1>
+      <p class="hero-description">
+        법정의무교육부터 직무전문, 생성형 AI·데이터, 리더십까지 구성원의 성장과 대학 혁신을 지원하는 맞춤형 연수 프로그램을 탐색해 보세요.
+      </p>
+
+      <!-- Stats Summary -->
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div id="stat-total" class="stat-number">-</div>
+          <div class="stat-label">전체 연수과정</div>
+        </div>
+        <div class="stat-card">
+          <div id="stat-mandatory" class="stat-number" style="color: #fca5a5;">-</div>
+          <div class="stat-label">법정의무 필수과정</div>
+        </div>
+        <div class="stat-card">
+          <div id="stat-online" class="stat-number" style="color: #93c5fd;">-</div>
+          <div class="stat-label">온라인 상시과정</div>
+        </div>
+        <div class="stat-card">
+          <div id="stat-category" class="stat-number" style="color: #a7f3d0;">-</div>
+          <div class="stat-label">개설 전문분야</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Area -->
+  <main class="main-container">
+
+    <!-- Search & Filter Controls Panel -->
+    <section class="filter-panel" aria-label="연수 검색 및 필터 패널">
+      
+      <!-- Search Bar -->
+      <div class="search-row">
+        <div class="search-input-wrap">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input 
+            type="text" 
+            id="search-input" 
+            class="search-input" 
+            placeholder="연수 과정명, 담당부서(재무과, 인재개발원 등), 학습 키워드를 검색하세요..."
+            autocomplete="off"
+          >
+          <button id="btn-clear-search" class="btn-clear-search" title="검색어 지우기">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Categories Filter Chips -->
+      <div class="categories-filter-wrap">
+        <div id="category-chips" class="category-chips-list" role="tablist" aria-label="분야별 필터">
+          <!-- Dynamically populated by main.js -->
+        </div>
+      </div>
+
+      <!-- Detail Select Filters & Sorting -->
+      <div class="controls-row">
+        <div class="selects-group">
+          <!-- Target Filter -->
+          <select id="target-select" class="filter-select" aria-label="대상 구분">
+            <option value="ALL">대상: 전체</option>
+          </select>
+
+          <!-- Requirement Filter -->
+          <select id="req-select" class="filter-select" aria-label="이수 구분">
+            <option value="ALL">이수: 전체</option>
+          </select>
+
+          <!-- Method Filter -->
+          <select id="method-select" class="filter-select" aria-label="교육 방식">
+            <option value="ALL">방식: 전체</option>
+          </select>
+
+          <!-- Sort Select -->
+          <select id="sort-select" class="filter-select" aria-label="정렬 기준">
+            <option value="DEFAULT">정렬: 과정코드순</option>
+            <option value="TITLE_ASC">정렬: 과정명 가나다순</option>
+            <option value="HOURS_DESC">정렬: 교육시간 긴 순</option>
+            <option value="HOURS_ASC">정렬: 교육시간 짧은 순</option>
+          </select>
+
+          <!-- Reset Button -->
+          <button id="btn-reset-filters" class="btn-reset-filters" title="모든 검색어 및 필터 조건을 초기화합니다.">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="1 4 1 10 7 10"></polyline>
+              <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+            </svg>
+            <span>필터 초기화</span>
+          </button>
+        </div>
+
+        <!-- Result Count Info -->
+        <div class="result-count-info">
+          총 <span id="result-count-val">0</span>개의 과정
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Courses Grid -->
+    <section id="courses-grid" class="courses-grid" aria-label="직무연수 과정 목록">
+      <!-- Dynamically populated or Skeletons rendered by main.js -->
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-univ-name">국립부산대학교 인재개발원</div>
+        <div>(46241) 부산광역시 금정구 부산대학로63번길 2 (장전동)</div>
+        <div>시스템 문의: 인재개발원 직무교육팀 (051-510-1231~4)</div>
+      </div>
+      <div style="text-align: right; font-size: 12px; color: #94a3b8;">
+        <div>데이터 출처: 부산대학교 2026 직무연수 운영계획</div>
+        <div>© 2026 Pusan National University. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PapaParse Library (CDN with local fallback) -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script>
+    if (typeof Papa === 'undefined') {
+      document.write('<script src="js/papaparse.min.js"><\/script>');
+    }
+  </script>
+
+  <!-- Application Logic -->
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

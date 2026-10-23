@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>직무연수 상세 안내 - 2026 부산대학교 직무연수 포털</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/pnu-logo.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/detail.css">
+</head>
+<body>
+
+  <!-- Site Global Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-wrap">
+        <img src="assets/pnu-logo.svg" alt="부산대학교 심볼" class="brand-logo">
+        <div class="brand-text-wrap">
+          <span class="brand-univ">부산대학교 직무연수 포털</span>
+          <span class="brand-badge">2026</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <a href="index.html" class="btn-back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>전체 과정 목록</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sub Navigation Bar -->
+  <nav class="detail-nav-bar">
+    <div class="detail-nav-inner">
+      <a href="index.html" class="btn-back-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>목록으로 돌아가기</span>
+      </a>
+      <div style="font-size: 13px; color: #64748b; font-weight: 600;">
+        2026 직무연수 상세 정보
+      </div>
+    </div>
+  </nav>
+
+  <!-- Not Found State Container -->
+  <div id="detail-not-found" style="display: none; max-width: 600px; margin: 80px auto; padding: 0 24px;">
+    <div class="empty-state">
+      <svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="8" x2="12" y2="12"></line>
+        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+      </svg>
+      <div class="empty-title">연수 정보를 찾을 수 없습니다.</div>
+      <div id="not-found-desc" class="empty-desc">요청하신 과정코드가 유효하지 않거나 데이터가 존재하지 않습니다.</div>
+      <a href="index.html" class="card-action-btn" style="max-width: 200px; margin: 0 auto; background: #0B2265; color: #fff;">
+        전체 목록으로 이동
+      </a>
+    </div>
+  </div>
+
+  <!-- Detail Page Content Container -->
+  <div id="detail-page-content">
+
+    <!-- Hero Header -->
+    <section class="detail-hero">
+      <div class="detail-hero-inner">
+        <div class="detail-hero-top">
+          <span id="detail-code-badge" class="detail-code-badge">과정코드 로딩 중...</span>
+          <span id="detail-tag-cat" class="badge badge-cat">분야</span>
+          <span id="detail-tag-req" class="badge badge-req-mandatory">이수구분</span>
+          <span id="detail-tag-method" class="badge badge-method-online">교육방식</span>
+        </div>
+
+        <h1 id="detail-title" class="detail-title">연수 과정을 불러오는 중입니다...</h1>
+        <p id="detail-summary" class="detail-summary-lead"></p>
+      </div>
+    </section>
+
+    <!-- Main Detail Grid -->
+    <main class="detail-container">
+
+      <!-- Left Content Column -->
+      <div class="detail-main-content">
+
+        <!-- Section 1: 과정 상세 소개 -->
+        <article class="detail-card">
+          <div class="detail-card-header">
+            <div class="card-header-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <h2 class="detail-section-title">과정 상세 소개 및 배경</h2>
+          </div>
+          <div id="detail-desc" class="detail-body-text">
+            데이터를 불러오는 중입니다...
+          </div>
+        </article>
+
+        <!-- Section 2: 학습 목표 -->
+        <article class="detail-card">
+          <div class="detail-card-header">
+            <div class="card-header-icon" style="background: #ecfdf5; color: #059669;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+            </div>
+            <h2 class="detail-section-title">핵심 학습 목표</h2>
+          </div>
+          <ul id="detail-objectives-list" class="objectives-list">
+            <!-- Dynamically populated -->
+          </ul>
+        </article>
+
+        <!-- Section 3: 주요 교육 내용 (커리큘럼) -->
+        <article class="detail-card">
+          <div class="detail-card-header">
+            <div class="card-header-icon" style="background: #eff6ff; color: #1d4ed8;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="8" y1="6" x2="21" y2="6"></line>
+                <line x1="8" y1="12" x2="21" y2="12"></line>
+                <line x1="8" y1="18" x2="21" y2="18"></line>
+                <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                <line x1="3" y1="18" x2="3.01" y2="18"></line>
+              </svg>
+            </div>
+            <h2 class="detail-section-title">주요 교육 내용 (커리큘럼)</h2>
+          </div>
+          <div id="detail-curriculum-list" class="curriculum-timeline">
+            <!-- Dynamically populated -->
+          </div>
+        </article>
+
+        <!-- Section 4: 수강 대상 및 이수 권고사항 -->
+        <article class="detail-card">
+          <div class="detail-card-header">
+            <div class="card-header-icon" style="background: #fef3c7; color: #b45309;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h2 class="detail-section-title">수강 대상 및 이수 구분</h2>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div style="background: #f8fafc; padding: 16px; border-radius: 8px;">
+              <div style="font-size: 12px; color: #64748b; font-weight: 600; margin-bottom: 4px;">수강 권장 대상</div>
+              <div id="detail-target-full" style="font-size: 16px; font-weight: 750; color: #0B2265;">-</div>
+            </div>
+            <div style="background: #f8fafc; padding: 16px; border-radius: 8px;">
+              <div style="font-size: 12px; color: #64748b; font-weight: 600; margin-bottom: 4px;">이수 필수 여부</div>
+              <div id="detail-req-full" style="font-size: 16px; font-weight: 750; color: #C81E1E;">-</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Right Sidebar (Sticky Quick Facts & CTA) -->
+      <aside class="detail-sidebar">
+        <div class="quick-facts-card">
+          <h3 class="quick-facts-title">연수 운영 개요</h3>
+          
+          <div class="facts-list">
+            <!-- Fact 1 -->
+            <div class="fact-item">
+              <svg class="fact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+              <div class="fact-info">
+                <span class="fact-label">교육 형태</span>
+                <span id="fact-method" class="fact-value">-</span>
+              </div>
+            </div>
+
+            <!-- Fact 2 -->
+            <div class="fact-item">
+              <svg class="fact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <div class="fact-info">
+                <span class="fact-label">인정 시간</span>
+                <span id="fact-hours" class="fact-value">-</span>
+              </div>
+            </div>
+
+            <!-- Fact 3 -->
+            <div class="fact-item">
+              <svg class="fact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+              </svg>
+              <div class="fact-info">
+                <span class="fact-label">정원 안내</span>
+                <span id="fact-capacity" class="fact-value">-</span>
+              </div>
+            </div>
+
+            <!-- Fact 4 -->
+            <div class="fact-item">
+              <svg class="fact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <div class="fact-info">
+                <span class="fact-label">교육 기간</span>
+                <span id="fact-period" class="fact-value">-</span>
+              </div>
+            </div>
+
+            <!-- Fact 5 -->
+            <div class="fact-item">
+              <svg class="fact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 14 10"></polyline>
+              </svg>
+              <div class="fact-info">
+                <span class="fact-label">신청 기간</span>
+                <span id="fact-apply-period" class="fact-value">-</span>
+              </div>
+            </div>
+
+            <!-- Fact 6 -->
+            <div class="fact-item">
+              <svg class="fact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              <div class="fact-info">
+                <span class="fact-label">주관 부서</span>
+                <span id="fact-department" class="fact-value">-</span>
+              </div>
+            </div>
+
+            <!-- Fact 7 -->
+            <div class="fact-item">
+              <svg class="fact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <div class="fact-info">
+                <span class="fact-label">직통 문의</span>
+                <span id="fact-contact" class="fact-value">-</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <a id="btn-apply-cta" href="#" class="btn-cta-apply" target="_blank" rel="noopener noreferrer">
+            <span>연수 신청하기 (HRD 연계)</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+
+          <button id="btn-copy-link" class="btn-cta-sub" type="button">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span>과정 안내 링크 복사</span>
+          </button>
+
+          <button id="btn-print" class="btn-cta-sub" type="button">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            <span>과정 안내서 인쇄</span>
+          </button>
+        </div>
+      </aside>
+
+    </main>
+
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-univ-name">국립부산대학교 인재개발원</div>
+        <div>(46241) 부산광역시 금정구 부산대학로63번길 2 (장전동)</div>
+        <div>시스템 문의: 인재개발원 직무교육팀 (051-510-1231~4)</div>
+      </div>
+      <div style="text-align: right; font-size: 12px; color: #94a3b8;">
+        <div>데이터 출처: 부산대학교 2026 직무연수 운영계획</div>
+        <div>© 2026 Pusan National University. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PapaParse CDN with local fallback -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script>
+    if (typeof Papa === 'undefined') {
+      document.write('<script src="js/papaparse.min.js"><\/script>');
+    }
+  </script>
+
+  <!-- Application Logic -->
+  <script src="js/api.js"></script>
+  <script src="js/detail.js"></script>
+</body>
+</html>
