@@ -1,4 +1,4 @@
-# 2026 부산대학교 직무연수 안내 웹사이트 구축 작업 기획서
+﻿# 2026 부산대학교 직무연수 안내 웹사이트 구축 작업 기획서
 
 ## 1. 프로젝트 개요
 
@@ -178,3 +178,13 @@ flowchart LR
 | **5단계** | 구글 시트 실시간 변경 검증 | 시트 데이터 1건 수정 후 브라우저 새로고침 시 즉시 반영되는지 검증 |
 | **6단계** | GitHub Public 저장소 생성 및 Pages 배포 | 저장소 푸시 후 GitHub Pages 빌드 완료 |
 | **7단계** | 배포 URL 접속 검증 및 최종 정리 | 실제 웹 URL 접속 및 모바일/데스크톱 반응형 동작 최종 점검 |
+
+---
+
+## 7. 최종 배포 결과 (2026-10-23 완료)
+
+- **GitHub 저장소 (Public)**: https://github.com/backjonghyeon/pnu-training-2026
+- **GitHub Pages 배포 URL**: https://backjonghyeon.github.io/pnu-training-2026/
+- **상세 페이지 테스트 URL**: https://backjonghyeon.github.io/pnu-training-2026/detail.html?code=PNU-2026-001
+- **배포 상태**: HTTP 200 OK (정상 서비스 중)
+- **구글 시트 실시간 연동**: https://docs.google.com/spreadsheets/d/1sWeq6LCPTp0I6ith07XQizLm-KcDvAcbeNZBHkOBOvk/gviz/tq?tqx=out:csv&sheet=data&headers=1
